@@ -66,7 +66,7 @@
 #pragma mark - network
 - (void)fetchMicroAppList {
     __weak typeof(self) weakSelf = self;
-    [AlitaMicroApp microAppListWithMainAppid:@"697f2658a46543ed90176ed401acc998" callback:^(NSArray<AlitaMicroApp *> * _Nullable list, AlitaPagination * _Nullable pagination, NSError * _Nullable error) {
+    [AlitaMicroApp microAppListWithCallback:^(NSArray<AlitaMicroApp *> * _Nullable list, AlitaPagination * _Nullable pagination, NSError * _Nullable error) {
         NSLog(@"%@\n%@\n%@", list, pagination, error);
         weakSelf.appList = list;
         [weakSelf.tableView reloadData];

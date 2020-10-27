@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import <AlitaNativeLib/AlitaNativeLib.h>
 
 @interface AppDelegate ()
 
@@ -17,6 +18,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    [AlitaNative registerWithAppId:@"697f2658a46543ed90176ed401acc998"];
     return YES;
 }
 

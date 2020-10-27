@@ -26,7 +26,7 @@ PODS:
   - LBXScan/UI (2.5.1):
     - LBXScan/Types (~> 2.2)
   - SSZipArchive (2.2.3)
-  - TZImagePickerController (3.4.5)
+  - TZImagePickerController (3.4.8)
 
 DEPENDENCIES:
   - AlitaNativeLib (from `https://github.com/WhaleCloudCamp/micro-app-ios-framework.git`)
@@ -44,7 +44,7 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   AlitaNativeLib:
-    :commit: 1246faa924ccd7a077c4e9b06055109429d6d52e
+    :commit: 3fd6edb5fb35ea579911ec6641a76f2a27046796
     :git: https://github.com/WhaleCloudCamp/micro-app-ios-framework.git
 
 SPEC CHECKSUMS:
@@ -52,7 +52,7 @@ SPEC CHECKSUMS:
   AlitaNativeLib: 9156b3687ac62bdda9900de67fcbb8afef4fce5c
   LBXScan: 90ca10d0c38fb4a5a6980d7782354f3f69f50093
   SSZipArchive: 62d4947b08730e4cda640473b0066d209ff033c9
-  TZImagePickerController: 8000bf4ac3f113ea42154db3c2c7f297e597a519
+  TZImagePickerController: 6685e6d81b8fd5453e80ba369dd4ebd6e97276ee
 
 PODFILE CHECKSUM: 10627ef6e2068b97011f1454c5c7d28712373c96
 
