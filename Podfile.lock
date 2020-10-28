@@ -44,7 +44,7 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   AlitaNativeLib:
-    :commit: 3fd6edb5fb35ea579911ec6641a76f2a27046796
+    :commit: 1cef205bc6bdf7d0717ddf122a5ba96bc9bfc662
     :git: https://github.com/WhaleCloudCamp/micro-app-ios-framework.git
 
 SPEC CHECKSUMS:
