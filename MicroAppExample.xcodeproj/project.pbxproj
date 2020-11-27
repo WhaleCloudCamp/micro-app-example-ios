@@ -188,7 +188,7 @@
 				F98BFCDC25427DEA00077BD8 /* Sources */,
 				F98BFCDD25427DEA00077BD8 /* Frameworks */,
 				F98BFCDE25427DEA00077BD8 /* Resources */,
-				EE951FCB4FF85A7775D9CBB6 /* [CP] Embed Pods Frameworks */,
+				AB4B94EFC19397282124A028 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -226,7 +226,7 @@
 				F98BFD0225427DEE00077BD8 /* Sources */,
 				F98BFD0325427DEE00077BD8 /* Frameworks */,
 				F98BFD0425427DEE00077BD8 /* Resources */,
-				00C0DFC449BBF44668BD87A7 /* [CP] Embed Pods Frameworks */,
+				DBC4571FF44F431E2A1C4EAE /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -308,23 +308,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		00C0DFC449BBF44668BD87A7 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-MicroAppExample-MicroAppExampleUITests/Pods-MicroAppExample-MicroAppExampleUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-MicroAppExample-MicroAppExampleUITests/Pods-MicroAppExample-MicroAppExampleUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MicroAppExample-MicroAppExampleUITests/Pods-MicroAppExample-MicroAppExampleUITests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		672B8D3D6562287B29FB7CC3 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -391,7 +374,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		EE951FCB4FF85A7775D9CBB6 /* [CP] Embed Pods Frameworks */ = {
+		AB4B94EFC19397282124A028 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -406,6 +389,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MicroAppExample/Pods-MicroAppExample-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DBC4571FF44F431E2A1C4EAE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MicroAppExample-MicroAppExampleUITests/Pods-MicroAppExample-MicroAppExampleUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MicroAppExample-MicroAppExampleUITests/Pods-MicroAppExample-MicroAppExampleUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MicroAppExample-MicroAppExampleUITests/Pods-MicroAppExample-MicroAppExampleUITests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -589,6 +589,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = T5CG98P673;
 				INFOPLIST_FILE = MicroAppExample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -606,6 +607,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = T5CG98P673;
 				INFOPLIST_FILE = MicroAppExample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

@@ -6,7 +6,7 @@ target 'MicroAppExample' do
   use_frameworks!
 
   # Pods for MicroAppExample
-  pod 'AlitaNativeLib', :git => 'https://github.com/WhaleCloudCamp/micro-app-ios-framework.git'
+  pod 'AlitaNativeLib', :git => 'https://github.com/WhaleCloudCamp/micro-app-ios-framework.git', :tag => '0.1.0-beta.1'
 
   target 'MicroAppExampleTests' do
     inherit! :search_paths
