@@ -18,7 +18,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    [AlitaNative registerWithAppId:@"697f2658a46543ed90176ed401acc998"];
+    [AlitaNative registerWithAppId:@"e222cc5713a348aeb1b01f44909854ad"];
     return YES;
 }
 

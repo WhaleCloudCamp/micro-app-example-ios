@@ -26,7 +26,7 @@
 }
 
 - (void)initSubviews {
-    self.tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
+    self.tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStyleGrouped];
     [self.view addSubview:self.tableView];
     self.tableView.dataSource = self;
     self.tableView.delegate = self;
@@ -43,8 +43,13 @@
 }
 
 #pragma mark - UITableView
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    return 2;
+}
+
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return self.appList.count;
+    return section == 0 ? self.appList.count : 1;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -53,14 +58,24 @@
     if (!cell) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellID];
     }
-    AlitaMicroApp *app = self.appList[indexPath.row];
-    cell.textLabel.text = app.appName;
+    if (indexPath.section == 0) {
+        AlitaMicroApp *app = self.appList[indexPath.row];
+        cell.textLabel.text = app.appName;
+    } else if (indexPath.section == 1) {
+        cell.textLabel.text = @"API 演示";
+    }
     return cell;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    AlitaMicroApp *app = self.appList[indexPath.row];
-    [AlitaNative viewController:self openMicroApp:app];
+    if (indexPath.section == 0) {
+        AlitaMicroApp *app = self.appList[indexPath.row];
+        [AlitaNative viewController:self openMicroApp:app];
+    } else if (indexPath.section == 1) {
+        [AlitaNative viewController:self openURL:[NSURL URLWithString:@"https://micro-app-demo-nextjs.vercel.app"] userData:@{
+            @"param": @"api demo",
+        }];
+    }
 }
 
 #pragma mark - network
