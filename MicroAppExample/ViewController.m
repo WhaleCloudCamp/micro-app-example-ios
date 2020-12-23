@@ -75,6 +75,9 @@
         [AlitaNative viewController:self openURL:[NSURL URLWithString:@"https://micro-app-demo-nextjs.vercel.app"] userData:@{
             @"param": @"api demo",
         }];
+//        [AlitaNative viewController:self openURL:[NSURL URLWithString:@"http://127.0.0.1:3000"] userData:@{
+//            @"param": @"api demo",
+//        }];
     }
 }
 

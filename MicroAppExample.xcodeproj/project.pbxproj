@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		44214698344030FE9CA6A59F /* Pods_MicroAppExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D332DC7EE8B2EAD51A13DC42 /* Pods_MicroAppExample.framework */; };
-		49313D969D47F909261CEB27 /* Pods_MicroAppExample_MicroAppExampleUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B5DCB39F8D41136B29A00A8 /* Pods_MicroAppExample_MicroAppExampleUITests.framework */; };
-		99BC7765A7C6AA03EB2EB105 /* Pods_MicroAppExampleTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34D65A4240A80B934E0088AA /* Pods_MicroAppExampleTests.framework */; };
+		114169828C6F041CC1006F98 /* Pods_MicroAppExampleTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 881E5D56A0D719A54798EB8C /* Pods_MicroAppExampleTests.framework */; };
+		8BF2D1012306D0CF90EBD20C /* Pods_MicroAppExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEECDDF2F60A5470D276BE2B /* Pods_MicroAppExample.framework */; };
+		B25DC8164B3FFE28A1D734DB /* Pods_MicroAppExample_MicroAppExampleUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1EB0DD7670A8E279B07E04EA /* Pods_MicroAppExample_MicroAppExampleUITests.framework */; };
 		F98BFCE525427DEA00077BD8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F98BFCE425427DEA00077BD8 /* AppDelegate.m */; };
 		F98BFCE825427DEA00077BD8 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F98BFCE725427DEA00077BD8 /* SceneDelegate.m */; };
 		F98BFCEB25427DEA00077BD8 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F98BFCEA25427DEA00077BD8 /* ViewController.m */; };
@@ -19,6 +19,7 @@
 		F98BFCF625427DED00077BD8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F98BFCF525427DED00077BD8 /* main.m */; };
 		F98BFD0025427DEE00077BD8 /* MicroAppExampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F98BFCFF25427DEE00077BD8 /* MicroAppExampleTests.m */; };
 		F98BFD0B25427DEE00077BD8 /* MicroAppExampleUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = F98BFD0A25427DEE00077BD8 /* MicroAppExampleUITests.m */; };
+		F9ECAD182591F3E800AA197E /* CustomPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = F9ECAD172591F3E800AA197E /* CustomPlugin.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,13 +40,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0B5DCB39F8D41136B29A00A8 /* Pods_MicroAppExample_MicroAppExampleUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MicroAppExample_MicroAppExampleUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1807817D70A02B64A6C210A2 /* Pods-MicroAppExample-MicroAppExampleUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MicroAppExample-MicroAppExampleUITests.debug.xcconfig"; path = "Target Support Files/Pods-MicroAppExample-MicroAppExampleUITests/Pods-MicroAppExample-MicroAppExampleUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		34D65A4240A80B934E0088AA /* Pods_MicroAppExampleTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MicroAppExampleTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1EB0DD7670A8E279B07E04EA /* Pods_MicroAppExample_MicroAppExampleUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MicroAppExample_MicroAppExampleUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7151313641149CF56FB6A0DA /* Pods-MicroAppExample-MicroAppExampleUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MicroAppExample-MicroAppExampleUITests.release.xcconfig"; path = "Target Support Files/Pods-MicroAppExample-MicroAppExampleUITests/Pods-MicroAppExample-MicroAppExampleUITests.release.xcconfig"; sourceTree = "<group>"; };
+		881E5D56A0D719A54798EB8C /* Pods_MicroAppExampleTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MicroAppExampleTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8928CF20D1EFA1076F0DFEE1 /* Pods-MicroAppExampleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MicroAppExampleTests.debug.xcconfig"; path = "Target Support Files/Pods-MicroAppExampleTests/Pods-MicroAppExampleTests.debug.xcconfig"; sourceTree = "<group>"; };
+		BEECDDF2F60A5470D276BE2B /* Pods_MicroAppExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MicroAppExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C09A993394F61BDBD90411FE /* Pods-MicroAppExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MicroAppExample.debug.xcconfig"; path = "Target Support Files/Pods-MicroAppExample/Pods-MicroAppExample.debug.xcconfig"; sourceTree = "<group>"; };
-		D332DC7EE8B2EAD51A13DC42 /* Pods_MicroAppExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MicroAppExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFB05981FE07021BD9C8B01C /* Pods-MicroAppExampleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MicroAppExampleTests.release.xcconfig"; path = "Target Support Files/Pods-MicroAppExampleTests/Pods-MicroAppExampleTests.release.xcconfig"; sourceTree = "<group>"; };
 		F685588FD5C3923EBFB53A08 /* Pods-MicroAppExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MicroAppExample.release.xcconfig"; path = "Target Support Files/Pods-MicroAppExample/Pods-MicroAppExample.release.xcconfig"; sourceTree = "<group>"; };
 		F98BFCE025427DEA00077BD8 /* MicroAppExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MicroAppExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -66,6 +67,8 @@
 		F98BFD0625427DEE00077BD8 /* MicroAppExampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MicroAppExampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F98BFD0A25427DEE00077BD8 /* MicroAppExampleUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MicroAppExampleUITests.m; sourceTree = "<group>"; };
 		F98BFD0C25427DEE00077BD8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F9ECAD162591F3E800AA197E /* CustomPlugin.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomPlugin.h; sourceTree = "<group>"; };
+		F9ECAD172591F3E800AA197E /* CustomPlugin.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomPlugin.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,7 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				44214698344030FE9CA6A59F /* Pods_MicroAppExample.framework in Frameworks */,
+				8BF2D1012306D0CF90EBD20C /* Pods_MicroAppExample.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,7 +84,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				99BC7765A7C6AA03EB2EB105 /* Pods_MicroAppExampleTests.framework in Frameworks */,
+				114169828C6F041CC1006F98 /* Pods_MicroAppExampleTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -89,7 +92,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				49313D969D47F909261CEB27 /* Pods_MicroAppExample_MicroAppExampleUITests.framework in Frameworks */,
+				B25DC8164B3FFE28A1D734DB /* Pods_MicroAppExample_MicroAppExampleUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -112,9 +115,9 @@
 		EB79FAC5E8C7CA7932B84418 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				D332DC7EE8B2EAD51A13DC42 /* Pods_MicroAppExample.framework */,
-				0B5DCB39F8D41136B29A00A8 /* Pods_MicroAppExample_MicroAppExampleUITests.framework */,
-				34D65A4240A80B934E0088AA /* Pods_MicroAppExampleTests.framework */,
+				BEECDDF2F60A5470D276BE2B /* Pods_MicroAppExample.framework */,
+				1EB0DD7670A8E279B07E04EA /* Pods_MicroAppExample_MicroAppExampleUITests.framework */,
+				881E5D56A0D719A54798EB8C /* Pods_MicroAppExampleTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -144,6 +147,7 @@
 		F98BFCE225427DEA00077BD8 /* MicroAppExample */ = {
 			isa = PBXGroup;
 			children = (
+				F9ECAD122591F27600AA197E /* Plugins */,
 				F98BFCE325427DEA00077BD8 /* AppDelegate.h */,
 				F98BFCE425427DEA00077BD8 /* AppDelegate.m */,
 				F98BFCE625427DEA00077BD8 /* SceneDelegate.h */,
@@ -175,6 +179,15 @@
 				F98BFD0C25427DEE00077BD8 /* Info.plist */,
 			);
 			path = MicroAppExampleUITests;
+			sourceTree = "<group>";
+		};
+		F9ECAD122591F27600AA197E /* Plugins */ = {
+			isa = PBXGroup;
+			children = (
+				F9ECAD162591F3E800AA197E /* CustomPlugin.h */,
+				F9ECAD172591F3E800AA197E /* CustomPlugin.m */,
+			);
+			path = Plugins;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -417,6 +430,7 @@
 			files = (
 				F98BFCEB25427DEA00077BD8 /* ViewController.m in Sources */,
 				F98BFCE525427DEA00077BD8 /* AppDelegate.m in Sources */,
+				F9ECAD182591F3E800AA197E /* CustomPlugin.m in Sources */,
 				F98BFCF625427DED00077BD8 /* main.m in Sources */,
 				F98BFCE825427DEA00077BD8 /* SceneDelegate.m in Sources */,
 			);

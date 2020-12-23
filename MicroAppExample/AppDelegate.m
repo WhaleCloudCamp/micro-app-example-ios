@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import <AlitaNativeLib/AlitaNativeLib.h>
+#import "CustomPlugin.h"
 
 @interface AppDelegate ()
 
@@ -18,7 +19,10 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    [AlitaNative setEnableLogging:YES];
     [AlitaNative registerWithAppId:@"e222cc5713a348aeb1b01f44909854ad"];
+    CustomPlugin *plugin = [CustomPlugin new];
+    [AlitaNative registerPlugin:plugin];
     return YES;
 }
 
