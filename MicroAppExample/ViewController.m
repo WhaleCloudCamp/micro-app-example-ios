@@ -13,6 +13,7 @@
 
 @property (nonatomic, strong) UITableView *tableView;
 @property (nonatomic, copy) NSArray<AlitaMicroApp *> *appList;
+@property (nonatomic, strong) NSArray *localData;
 
 @end
 
@@ -36,6 +37,31 @@
     [self fetchMicroAppList];
 }
 
+- (NSArray *)localData {
+    if (!_localData) {
+        _localData = @[
+            @{
+                @"title": @"API演示",
+                @"action": ^() {
+                    [AlitaNative viewController:self openURL:[NSURL URLWithString:@"https://micro-app-demo-nextjs.vercel.app"] userData:@{
+                        @"param": @"api demo",
+                    }];
+                },
+            },
+            @{
+                @"title": @"调试工具",
+                @"action": ^() {
+                    AlitaDebugViewController *vc = AlitaDebugViewController.new;
+                    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:vc];
+                    nav.modalPresentationStyle = UIModalPresentationFullScreen;
+                    [self presentViewController:nav animated:YES completion:nil];
+                },
+            },
+        ];
+    };
+    return _localData;
+}
+
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
     NSDate *end = NSDate.date;
@@ -49,7 +75,7 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return section == 0 ? self.appList.count : 1;
+    return section == 0 ? self.appList.count : self.localData.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -62,7 +88,8 @@
         AlitaMicroApp *app = self.appList[indexPath.row];
         cell.textLabel.text = app.appName;
     } else if (indexPath.section == 1) {
-        cell.textLabel.text = @"API 演示";
+        NSDictionary *data = self.localData[indexPath.row];
+        cell.textLabel.text = data[@"title"];
     }
     return cell;
 }
@@ -72,12 +99,8 @@
         AlitaMicroApp *app = self.appList[indexPath.row];
         [AlitaNative viewController:self openMicroApp:app];
     } else if (indexPath.section == 1) {
-        [AlitaNative viewController:self openURL:[NSURL URLWithString:@"https://micro-app-demo-nextjs.vercel.app"] userData:@{
-            @"param": @"api demo",
-        }];
-//        [AlitaNative viewController:self openURL:[NSURL URLWithString:@"http://127.0.0.1:3000"] userData:@{
-//            @"param": @"api demo",
-//        }];
+        void (^action)(void) = self.localData[indexPath.row][@"action"];
+        action();
     }
 }
 
