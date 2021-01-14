@@ -24,6 +24,7 @@
     // Do any additional setup after loading the view.
     [self initSubviews];
     [self initData];
+    [self listenJSNotice];
 }
 
 - (void)initSubviews {
@@ -112,6 +113,27 @@
         weakSelf.appList = list;
         [weakSelf.tableView reloadData];
     }];
+}
+
+#pragma mark - notification
+- (void)listenJSNotice {
+    [NSNotificationCenter.defaultCenter addObserver:self selector:@selector(handleJSNotice:) name:@"hello" object:nil];
+}
+
+- (void)handleJSNotice:(NSNotification *)note {
+    NSDictionary *userInfo = note.userInfo;
+    NSString *userInfoString = [[NSString alloc] initWithData:[NSJSONSerialization dataWithJSONObject:userInfo options:0 error:nil] encoding:NSUTF8StringEncoding];
+    UIAlertController *alertVC = [UIAlertController alertControllerWithTitle:@"通知" message:userInfoString preferredStyle:UIAlertControllerStyleAlert];
+    __weak __typeof(alertVC) weakAlertVC = alertVC;
+    [alertVC addAction:[UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        [weakAlertVC dismissViewControllerAnimated:YES completion:nil];
+    }]];
+    [self.presentedViewController presentViewController:alertVC animated:YES completion:nil];
+}
+
+- (void)dealloc
+{
+    [NSNotificationCenter.defaultCenter removeObserver:self];
 }
 
 
