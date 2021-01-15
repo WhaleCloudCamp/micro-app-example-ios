@@ -14,7 +14,7 @@ PODS:
   - AFNetworking/Serialization (4.0.1)
   - AFNetworking/UIKit (4.0.1):
     - AFNetworking/NSURLSession
-  - AlitaNativeLib (0.5.4):
+  - AlitaNativeLib (0.5.5):
     - AFNetworking (~> 4.0)
     - LBXScan/LBXNative (~> 2.5)
     - LBXScan/UI (~> 2.5)
@@ -29,7 +29,7 @@ PODS:
   - TZImagePickerController (3.5.8)
 
 DEPENDENCIES:
-  - AlitaNativeLib (from `https://github.com/WhaleCloudCamp/micro-app-ios-framework.git`, tag `0.5.4`)
+  - AlitaNativeLib (from `https://github.com/WhaleCloudCamp/micro-app-ios-framework.git`, tag `0.5.5`)
 
 SPEC REPOS:
   trunk:
@@ -41,20 +41,20 @@ SPEC REPOS:
 EXTERNAL SOURCES:
   AlitaNativeLib:
     :git: https://github.com/WhaleCloudCamp/micro-app-ios-framework.git
-    :tag: 0.5.4
+    :tag: 0.5.5
 
 CHECKOUT OPTIONS:
   AlitaNativeLib:
     :git: https://github.com/WhaleCloudCamp/micro-app-ios-framework.git
-    :tag: 0.5.4
+    :tag: 0.5.5
 
 SPEC CHECKSUMS:
   AFNetworking: 7864c38297c79aaca1500c33288e429c3451fdce
-  AlitaNativeLib: a66ed7e5889e056fec4f70e25f4b434adfa8a095
+  AlitaNativeLib: 82d92522534c02fa99a1be5d391512d09d3be800
   LBXScan: 90ca10d0c38fb4a5a6980d7782354f3f69f50093
   SSZipArchive: 62d4947b08730e4cda640473b0066d209ff033c9
   TZImagePickerController: 7fd9702897ef8c0b7c951e5463f4bcf398296f9e
 
-PODFILE CHECKSUM: 53538e0525fda5f142f9afbbb33c41c766a7b328
+PODFILE CHECKSUM: 83ccf5e0127cb6fc4a046ccb60906a2547510ace
 
 COCOAPODS: 1.10.0
