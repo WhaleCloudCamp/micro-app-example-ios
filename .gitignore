@@ -67,3 +67,6 @@ fastlane/test_output
 
 iOSInjectionProject/
 screenshots.html
+
+# dotenv
+.env.default

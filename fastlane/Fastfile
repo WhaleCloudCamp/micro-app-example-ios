@@ -1,0 +1,47 @@
+# This file contains the fastlane.tools configuration
+# You can find the documentation at https://docs.fastlane.tools
+#
+# For a list of all available actions, check out
+#
+#     https://docs.fastlane.tools/actions
+#
+# For a list of all available plugins, check out
+#
+#     https://docs.fastlane.tools/plugins/available-plugins
+#
+
+# Uncomment the line if you want fastlane to automatically update itself
+# update_fastlane
+
+workspace = "MicroAppExample.xcworkspace"
+scheme = "MicroAppExample"
+pgyer_api_key = ENV['PGYER_API_KEY']
+pgyer_user_key = ENV['PGYER_USER_KEY']
+
+default_platform(:ios)
+
+platform :ios do
+  desc "Build project"
+  lane :build_ipa do |options|
+    configuration = options[:configuration] ? options[:configuration] : "Release"
+    puts pgyer_api_key
+    puts pgyer_user_key
+    next
+    cocoapods
+    build_app(
+      workspace: workspace,
+      configuration: configuration,
+      scheme: scheme,
+      silent: true,
+      clean: true,
+      output_directory: "build",
+      export_method: "development",
+    )
+    ipa_path = lane_context[SharedValues::IPA_OUTPUT_PATH]
+    pgyer(
+      api_key: pgyer_api_key,
+      user_key: pgyer_user_key,
+      ipa: ipa_path,
+    )
+  end
+end
