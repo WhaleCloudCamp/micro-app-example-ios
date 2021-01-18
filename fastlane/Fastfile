@@ -14,6 +14,7 @@
 # update_fastlane
 
 workspace = "MicroAppExample.xcworkspace"
+project = "MicroAppExample.xcodeproj"
 scheme = "MicroAppExample"
 pgyer_api_key = ENV['PGYER_API_KEY']
 pgyer_user_key = ENV['PGYER_USER_KEY']
@@ -24,9 +25,6 @@ platform :ios do
   desc "Build project"
   lane :build_ipa do |options|
     configuration = options[:configuration] ? options[:configuration] : "Release"
-    puts pgyer_api_key
-    puts pgyer_user_key
-    next
     cocoapods
     build_app(
       workspace: workspace,
@@ -42,6 +40,32 @@ platform :ios do
       api_key: pgyer_api_key,
       user_key: pgyer_user_key,
       ipa: ipa_path,
+    )
+
+
+    version = get_version_number(
+      xcodeproj: project,
+    )
+
+    build_number = get_build_number(
+      xcodeproj: project,
+    )
+
+    increment_build_number(
+      xcodeproj: project,
+    )
+
+    git_add
+    git_commit(
+      message: "release #{version}(#{build_number})"
+    )
+    add_git_tag(
+      tag: "#{version}(#{build_number})"
+    )
+    push_to_git_remote(
+      local_branch: 'main',
+      remote_branch: 'main',
+      tags: true,
     )
   end
 end
