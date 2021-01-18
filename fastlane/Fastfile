@@ -57,14 +57,15 @@ platform :ios do
 
     git_add
     git_commit(
+      path: "."
       message: "release #{version}(#{build_number})"
     )
     add_git_tag(
       tag: "#{version}(#{build_number})"
     )
     push_to_git_remote(
-      local_branch: 'main',
-      remote_branch: 'main',
+      local_branch: "main",
+      remote_branch: "main",
       tags: true,
     )
   end
