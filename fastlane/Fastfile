@@ -57,7 +57,7 @@ platform :ios do
 
     git_add
     git_commit(
-      path: "."
+      path: ".",
       message: "release #{version}(#{build_number})"
     )
     add_git_tag(
